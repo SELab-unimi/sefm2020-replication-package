@@ -1,0 +1,12 @@
+
+par(mfrow=c(1,5))
+report001 <- read.delim("report001", header = TRUE, sep = " ")
+boxplot(tests ~ category, data = report001, col = "lightgray")
+report002 <- read.delim("report002", header = TRUE, sep = " ")
+boxplot(tests ~ category, data = report002, col = "lightgray")
+report004 <- read.delim("report004", header = TRUE, sep = " ")
+boxplot(tests ~ category, data = report004, col = "lightgray")
+report008 <- read.delim("report008", header = TRUE, sep = " ")
+boxplot(tests ~ category, data = report008, col = "lightgray")
+report012 <- read.delim("report012", header = TRUE, sep = " ")
+boxplot(tests ~ category, data = report012, col = "lightgray")
