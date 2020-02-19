@@ -4,7 +4,7 @@
 # args
 log_prefix=$1
 u_values=(u25 u50 u75 u100)
-rectangles=(001 002 004 008 012)
+rectangles=(001 002 004 008 016)
 # -----------------------------------------------------------------------------
 
 single_report() {
@@ -24,5 +24,6 @@ single_report() {
 # execution
 for r in ${rectangles[*]}
 do
+  echo Creating report${r}
   echo -e "$( single_report $r )" > report${r}
 done

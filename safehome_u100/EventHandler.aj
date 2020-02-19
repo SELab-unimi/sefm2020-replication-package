@@ -33,7 +33,7 @@ public class EventHandler {
     static private final String JMDP_MODEL_PATH = "src/main/resources/safehome_u100.jmdp";
     static final String RECTANGLES_PATH = "src/main/resources/rectangles";
 
-    static final int SAMPLE_SIZE = 4000;
+    static final int SAMPLE_SIZE = 2000;
     static final Monitor.Termination TERMINATION_CONDITION = Monitor.Termination.BOUNDS;
     static final double COVERAGE = 0.0;
     static final double LIMIT = 100000;

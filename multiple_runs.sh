@@ -9,7 +9,7 @@ times=$1
 
 # execution
 
-for i in `seq 0 $times`
+for i in `seq 1 $times`
 do
   out_dir=zlogs$i
   mkdir -p $out_dir
