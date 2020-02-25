@@ -3,13 +3,14 @@
 
 # args
 
-# number of executions
-times=$1
+# number of executions (i.e., for loop $from $to indexes)
+from=$1
+to=$2
 # -----------------------------------------------------------------------------
 
 # execution
 
-for i in `seq 1 $times`
+for i in `seq $from $to`
 do
   out_dir=zlogs$i
   mkdir -p $out_dir

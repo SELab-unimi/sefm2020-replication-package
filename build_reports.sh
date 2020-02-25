@@ -7,7 +7,7 @@ u_values=(u25 u50 u75 u100)
 rectangles=(001 002 004 008 016)
 # -----------------------------------------------------------------------------
 
-single_report() {
+distance_report() {
   distance=$1
   echo tests category
   for u in ${u_values[*]}
@@ -21,9 +21,31 @@ single_report() {
   done
 }
 
+uncertainty_report() {
+  u_value=$1
+  echo tests distance
+  for d in ${rectangles[*]}
+  do
+    for tests in $(grep ${u_value} report${d} | cut -d' ' -f1)
+    do
+      echo $tests $d
+    done
+  done
+}
+
 # execution
+
+echo Creating tests_by_distance reports...
 for r in ${rectangles[*]}
 do
   echo Creating report${r}
-  echo -e "$( single_report $r )" > report${r}
+  echo -e "$( distance_report $r )" > report${r}
+done
+
+echo Creating tests_by_uncertainty_degree reports...
+for u in ${u_values[*]}
+do
+  category=$(echo ${u} | cut -d'u' -f2)
+  echo Creating report${category}
+  echo -e "$( uncertainty_report $category )" > report${category}
 done
