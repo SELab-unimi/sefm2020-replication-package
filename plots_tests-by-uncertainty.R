@@ -1,5 +1,5 @@
 # boxplots tests_by_uncertainty
-par(mfrow=c(1,5))
+par(mfrow=c(1,4))
 report25 <- read.delim("report25", header = TRUE, sep = " ")
 boxplot(tests ~ distance, data = report25, col = "lightgray")
 report50 <- read.delim("report50", header = TRUE, sep = " ")
