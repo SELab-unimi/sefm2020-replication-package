@@ -22,5 +22,5 @@ gplot <- ggplot(data = log, aes(x=as.factor(uncertainty), y=as.factor(distance),
 
 print(gplot)
 dev.off()
-system("pdfcrop --margins '0 0 0 0' effect-size_tmp.pdf effect-size.pdf")
+system("pdfcrop --margins '0 0 0 0' effect-size_tmp.pdf plots/effect-size.pdf")
 system("rm *_tmp.pdf")

@@ -8,8 +8,10 @@ log_dir=$1
 
 # config
 
-# edit this part with your own environment settings
-mbt_module_dir=/Users/matteocamilli/tools/mbt-module
+# edit this part with your own setting
+# MBT module directory
+mbt_module_dir=/Users/myUser/tools/mbt-module
+
 # do not edit the following lines
 res_dir=$mbt_module_dir/src/main/resources
 handler_dir=$mbt_module_dir/src/main/java/it/unimi/di/se/monitor/

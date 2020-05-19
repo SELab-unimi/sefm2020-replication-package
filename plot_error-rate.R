@@ -22,5 +22,5 @@ gplot <- ggplot(data = log, aes(x=as.factor(uncertainty), y=as.factor(distance),
 
 print(gplot)
 dev.off()
-system("pdfcrop --margins '0 0 0 0' error-rate_tmp.pdf error-rate.pdf")
+system("pdfcrop --margins '0 0 0 0' error-rate_tmp.pdf plots/error-rate.pdf")
 system("rm *_tmp.pdf")
